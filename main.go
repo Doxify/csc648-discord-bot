@@ -11,14 +11,8 @@ import (
 )
 
 var (
-	// Token string
 	users *Users
 )
-
-// func init() {
-// 	flag.StringVar(&Token, "t", "", "Discord Bot Token")
-// 	flag.Parse()
-// }
 
 func main() {
 

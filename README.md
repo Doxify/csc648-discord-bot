@@ -33,14 +33,21 @@ These commands will work in any channels the bot has access to.
 
 ### Prerequisites
 * Create a Discord bot [here](https://discord.com/developers/applications) and invite it to your server.
-* Copy the contents of `.example.data.json` to a file called `data.json` and fill it out.
+* Copy the contents of `.example.data.json` to a file called `data.json` and
+  fill it out.
+* Copy the contents of `.example.dev` to a file called `.env` and add your bot
+  token to it.
+* Docker and Docker compose
 
-### Running the bot
-1. Build the application
-  ```go
-    go build
-  ```
-2. Launch the application
-  ```bash
-    ./csc648-discord-bot -t <DISCORD_BOT_TOKEN>
-  ```
+### Running the bot with Docker
+Make sure you are in the root directory of the project when running these commands.
+
+1. Launching the bot:
+```shell
+  sudo docker-compose up --build -d
+```
+
+2. Stopping the bot:
+```shell
+  sudo docker-compose down
+```
