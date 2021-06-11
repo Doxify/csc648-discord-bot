@@ -1,7 +1,6 @@
 package main
 
 import (
-	"flag"
 	"fmt"
 	"os"
 	"os/signal"
@@ -12,14 +11,14 @@ import (
 )
 
 var (
-	Token string
+	// Token string
 	users *Users
 )
 
-func init() {
-	flag.StringVar(&Token, "t", "", "Discord Bot Token")
-	flag.Parse()
-}
+// func init() {
+// 	flag.StringVar(&Token, "t", "", "Discord Bot Token")
+// 	flag.Parse()
+// }
 
 func main() {
 
@@ -38,7 +37,7 @@ func main() {
 	}
 
 	// Create a new discord bot
-	dg, err := discordgo.New("Bot " + Token)
+	dg, err := discordgo.New("Bot " + os.Getenv("DISCORD_BOT_TOKEN"))
 	if err != nil {
 		fmt.Println("error creating Discord session,", err)
 		return

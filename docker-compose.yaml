@@ -1,0 +1,7 @@
+services:
+  app:
+    image: golang
+    build:
+      context: .
+    env_file: 
+      - .env
