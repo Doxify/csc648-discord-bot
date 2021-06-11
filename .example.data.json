@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "id": "",
+      "database": {
+        "host": "",
+        "port": "",
+        "user": "",
+        "pass": "",
+        "name": ""
+      }
+    }
+  ]
+}
